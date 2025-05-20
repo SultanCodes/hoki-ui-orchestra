@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Campaign, Channel } from '../../pages/Campaigns';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -539,7 +538,7 @@ const CampaignDetail: React.FC<CampaignDetailProps> = ({ campaign, onBack, isMob
                         <XAxis dataKey="name" stroke="#888" fontSize={12} />
                         <YAxis stroke="#888" fontSize={12} />
                         <ChartTooltip content={<ChartTooltipContent />} />
-                        <Bar dataKey="value" nameKey="name" fill="#8884d8">
+                        <Bar dataKey="value" fill="#8884d8">
                           {channelData.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={entry.color} />
                           ))}
