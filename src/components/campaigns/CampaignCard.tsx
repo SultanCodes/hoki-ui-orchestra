@@ -10,7 +10,7 @@ interface CampaignCardProps {
   name: string;
   status: 'active' | 'paused' | 'completed' | 'draft';
   progress: number;
-  channels: Array<'email' | 'linkedin' | 'sms' | 'calls'>;
+  channels: Array<'email' | 'linkedin' | 'sms' | 'calls'> | ReadonlyArray<'email' | 'linkedin' | 'sms' | 'calls'>;
   leads: {
     total: number;
     engaged: number;
