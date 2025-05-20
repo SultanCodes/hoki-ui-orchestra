@@ -1,5 +1,4 @@
 
-import { Badge as ShadcnBadge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 interface BadgeProps {
@@ -10,21 +9,21 @@ interface BadgeProps {
 
 const Badge: React.FC<BadgeProps> = ({ variant = 'primary', children, className }) => {
   const badgeClasses = {
-    success: 'bg-success/20 text-success',
-    error: 'bg-error/20 text-error',
-    warning: 'bg-warning/20 text-neutral-dark',
-    primary: 'bg-primary/20 text-primary',
-    secondary: 'bg-secondary/20 text-secondary',
-    email: 'bg-channel-email/20 text-channel-email',
-    linkedin: 'bg-channel-linkedin/20 text-channel-linkedin',
-    sms: 'bg-channel-sms/20 text-channel-sms',
-    calls: 'bg-channel-calls/20 text-neutral-dark',
+    success: 'badge-success',
+    error: 'badge-error',
+    warning: 'badge-warning',
+    primary: 'badge-primary',
+    secondary: 'badge-secondary',
+    email: 'badge-channel-email',
+    linkedin: 'badge-channel-linkedin',
+    sms: 'badge-channel-sms',
+    calls: 'badge-channel-calls',
   };
 
   return (
-    <ShadcnBadge className={cn(badgeClasses[variant], 'font-medium', className)}>
+    <span className={cn(badgeClasses[variant], className)}>
       {children}
-    </ShadcnBadge>
+    </span>
   );
 };
 

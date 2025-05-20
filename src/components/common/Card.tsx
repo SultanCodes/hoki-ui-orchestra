@@ -1,5 +1,4 @@
 
-import { Card as ShadcnCard } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
 interface CardProps {
@@ -9,9 +8,9 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ children, className }) => {
   return (
-    <ShadcnCard className={cn('p-5', className)}>
+    <div className={cn('card', className)}>
       {children}
-    </ShadcnCard>
+    </div>
   );
 };
 
